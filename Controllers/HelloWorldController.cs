@@ -13,6 +13,14 @@ public class HelloWorldController(ILogger<HelloWorldController> logger) : Contro
         return Ok("Hello World! 🍡");
     }
 
+
+ [HttpGet] [Route("hello")]// Matches GET requests to /HelloWorld
+    public IActionResult GetHelloWorld() {
+        logger.LogInformation("Hello World endpoint was hit.");
+
+        return Ok("Hello World! 🍡");
+    }
+
     [HttpGet("echo")]// Matches GET requests to /HelloWorld/echo
     public IActionResult GetEcho([FromQuery] string message) {
 
