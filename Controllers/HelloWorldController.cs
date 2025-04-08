@@ -15,7 +15,7 @@ public class HelloWorldController(ILogger<HelloWorldController> logger) : Contro
 
 
  [HttpGet] [Route("hello")]// Matches GET requests to /HelloWorld
-    public IActionResult GetHelloWorld() {
+    public IActionResult GetHelloWorld2() {
         logger.LogInformation("Hello World endpoint was hit.");
 
         return Ok("Hello World! 🍡");
